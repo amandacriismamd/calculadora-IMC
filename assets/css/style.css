@@ -1,0 +1,281 @@
+* {
+    font-family: 'Poppins', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(77, 123, 77);
+    overflow: hidden;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+#img img {
+    width: 31rem
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: aliceblue;
+    background-color: rgb(72, 111, 80);
+    border-radius: 40px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#title {
+    font-size: 2.25rem;
+    position: relative;
+}
+
+#title::after {
+    position: absolute;
+    content: '';
+    background-color: rgb(4, 47, 33);
+    width: 8rem;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border: 8px;
+}
+
+.input-box label {
+    font-size: 1.1rem;
+    color: aliceblue;
+    font-weight: 500;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(46, 109, 59);
+    padding: 0.3rem;
+    border-radius: 10px;
+    margin-top: 3px;
+}
+
+.input-field span,
+.input-field i {
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+}
+
+.input-field input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+    color: aliceblue;
+    padding: 0 0.5rem;
+}
+
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+#calculate {
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: rgb(49, 67, 49);
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+#result {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    border-top: 1px solid rgb(37, 61, 38);
+    padding: 0.75rem 0;
+}
+
+#bmi {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.25rem;
+}
+
+#bmi span:last-child {
+    font-size: 0.875rem;
+    color: aliceblue;
+}
+
+#description {
+    width: 15.5rem;
+}
+
+#more_info {
+    border-top: 1px solid rgb(37, 61, 38);
+    padding-top: 1.5rem;
+}
+
+#more_info a {
+    color: rgb(154, 255, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+#more_info a:hover {
+    color: aliceblue;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #img img {
+        width: 50px;
+        height: 300px;
+        margin-bottom: 0;
+    }
+
+    #calculator {
+        padding: 1rem;
+        width: 90%;
+        /* Usa quase toda a largura disponível */
+        max-width: 20rem;
+        /* Limite para manter harmonia */
+        border-radius: 25px;
+    }
+
+    #title {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .input-box label {
+        font-size: 1rem;
+    }
+
+    .input-field {
+        padding: 0.4rem;
+    }
+
+    #calculate {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    #result {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    #description {
+        text-align: center;
+    }
+
+    #more_info {
+        padding-top: 1rem;
+    }
+
+    #more_info a {
+        font-size: 0.8rem;
+    }
+}
+.normal {
+    color: rgb(38, 224, 156);
+}
+.warn {
+    color: rgb(71, 2, 2);
+}
+/* Responsividade para telas menores que 480px */
+@media (max-width: 480px) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    #img img {
+        width: 12rem;
+        /* Reduzido para dispositivos muito pequenos */
+        max-width: 80%;
+        /* Ajuste flexível */
+    }
+
+    #calculator {
+        padding: 0.8rem;
+        border-radius: 20px;
+        width: 95%;
+        /* Maximiza o uso da largura */
+        max-width: 18rem;
+    }
+
+    #title {
+        font-size: 1.5rem;
+    }
+
+    .input-box label {
+        font-size: 0.9rem;
+    }
+
+    .input-field {
+        padding: 0.3rem;
+    }
+
+    .input-field input {
+        font-size: 0.9rem;
+    }
+
+    #calculate {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+
+    #result {
+        gap: 0.8rem;
+    }
+
+    #description {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    #more_info a {
+        font-size: 0.75rem;
+    }
+}
